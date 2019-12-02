@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameservers>
+	<gameserver id="1" channelId ="1" channelPosition="1" name="HomeGuild" channelName="Server: 1" port="8886"></gameserver>
+	<gameserver id="1" channelId ="1" channelPosition="1" name="HomeGuild" channelName="Server: 1" port="8886"></gameserver>
+	<gameserver id="1" channelId ="1" channelPosition="1" name="HomeGuild" channelName="Server: 1" port="8886"></gameserver>
+</gameservers>

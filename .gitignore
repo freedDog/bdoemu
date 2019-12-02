@@ -1,0 +1,21 @@
+*.class
+
+# Project Files
+.idea
+logs
+log
+target
+binary
+*.iml
+build
+*.bak
+bin
+.settings
+*.mf
+.project
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear

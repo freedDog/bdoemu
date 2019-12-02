@@ -1,0 +1,3 @@
+<firewall>
+    <block ip="8.8.8.8" />
+</firewall>

@@ -1,0 +1,94 @@
+package com.bdoemu.gameserver.model.creature.npc.worker.enums;
+
+import com.bdoemu.gameserver.model.creature.npc.worker.works.ANpcWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.ChangeTownWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.GuildHouseLargeCraftWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.HarvestWorkingWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.HousePartyWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.PlantBulidingWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.PlantRentHouseLargeCraftWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.PlantRentHouseWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.PlantZoneWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.RegionManagingWork;
+import com.bdoemu.gameserver.model.creature.npc.worker.works.UpgradeWork;
+
+/**
+ * @ClassName ENpcWorkingType
+ * @Description  NPC 工作类型
+ * @Author JiangBangMing
+ * @Date 2019/7/10 10:22
+ * VERSION 1.0
+ */
+public enum ENpcWorkingType {
+
+    PlantZone {
+        @Override
+        ANpcWork newInstance() {
+            return new PlantZoneWork(this);
+        }
+    },
+    Upgrade {
+        @Override
+        ANpcWork newInstance() {
+            return new UpgradeWork(this);
+        }
+    },
+    PlantRentHouse {
+        @Override
+        ANpcWork newInstance() {
+            return new PlantRentHouseWork(this);
+        }
+    },
+    ChangeTown {
+        @Override
+        ANpcWork newInstance() {
+            return new ChangeTownWork(this);
+        }
+    },
+    PlantBuliding {
+        @Override
+        ANpcWork newInstance() {
+            return new PlantBulidingWork(this);
+        }
+    },
+    RegionManaging {
+        @Override
+        ANpcWork newInstance() {
+            return new RegionManagingWork(this);
+        }
+    },
+    PlantRentHouseLargeCraft {
+        @Override
+        ANpcWork newInstance() {
+            return new PlantRentHouseLargeCraftWork(this);
+        }
+    },
+    HouseParty {
+        @Override
+        ANpcWork newInstance() {
+            return new HousePartyWork(this);
+        }
+    },
+    GuildHouseLargeCraft {
+        @Override
+        ANpcWork newInstance() {
+            return new GuildHouseLargeCraftWork(this);
+        }
+    },
+    HarvestWorking {
+        @Override
+        ANpcWork newInstance() {
+            return new HarvestWorkingWork(this);
+        }
+    };
+
+    public int getId() {
+        return this.ordinal();
+    }
+
+    abstract ANpcWork newInstance();
+
+    public ANpcWork newNpcWorkInstance() {
+        return this.newInstance();
+    }
+}
